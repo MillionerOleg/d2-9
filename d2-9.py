@@ -2,8 +2,11 @@ import sentry_sdk
 import os
 from bottle import HTTPResponse, Bottle, request
 from sentry_sdk.integrations.bottle import BottleIntegration
+
+# Можете проверить, вставив свой DSN, с другой стороны.. Зачем?
+sentry_dsn = ""
 sentry_sdk.init(
-    "https://40f676f3d47e46198be4e3472d7083cb@o577999.ingest.sentry.io/5733923",
+    sentry_dsn,
     integrations=[BottleIntegration()]
 )
 
