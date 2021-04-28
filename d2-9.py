@@ -6,7 +6,7 @@ from sentry_sdk.integrations.bottle import BottleIntegration
 # Можете проверить, вставив свой DSN, с другой стороны.. Зачем?
 sentry_dsn = ""
 sentry_sdk.init(
-    sentry_dsn,
+    dsn = sentry_dsn,
     integrations=[BottleIntegration()]
 )
 
